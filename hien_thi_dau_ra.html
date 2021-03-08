@@ -10,25 +10,29 @@
     <button onclick="alert('helu')">clickgo</button>
     <h1  onclick="goto()" id="song">sông làm việc và yêu</h1>
 </body>
-<!-- <script>
-    function goto(){
-        alert('loia')
-    }
-    var dimo = document.getElementById('song');
-    dimo.addEventListener('click',clickto);
-    function clickto() {
-        alert('loko');
-    } -->
-    <h2>What Can JavaScript Do?</h2>
-
-<p>JavaScript can change HTML attribute values.</p>
-
-<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
-
-<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
-
-
-
-<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
-
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+ function showMessage(){
+     alert('Xin chào!');
+ }
+</script>
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+ function showMessage(){
+     document.getElementById('messageDiv').innerHTML = 'Xin chào!';
+ }
+</script>
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+ function showMessage(){
+     document.write('Xin chào!');
+ }
+</script>
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+ function showMessage(){
+     console.log('Xin chào!');
+ }
+</script>
 </html>

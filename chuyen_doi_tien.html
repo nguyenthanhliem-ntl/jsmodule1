@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+</head>
+<body>       
+    <table>
+        <tr>
+            <th scope="col">Amount </th>
+            <th scope="col" style="width: 125px;">From Currency</th>
+            <th scope="col" style="width: 125px;">To Currency </th>    
+            <th scope="col"></th>        
+        </tr>        
+        <td><input type="number"  id="gt">  </td>     
+            <th scope="col">
+                <select id="1" style="width: 100px;">
+                    <option value="23000">USD</option>
+                    <option value="1">VietNam</option>            
+                </select>     
+            </th>
+            <th scope="col">
+                <select id="2" style="width: 100px;">    
+                    <option value="1">VietNam</option>
+                    <option value="23000">USD</option>            
+                </select>
+            </th>                   
+        <td><button onclick="doiVND()">Convert</button></td>    
+    </table>     
+        <p><div style="color: blue;"  id = "kq" ></div> </p>
+<script>           
+        function doiVND(){
+            var doido = document.getElementById('1').value;
+            var doiVnd = document.getElementById('2').value; 
+            var gt = document.getElementById('gt').value;
+            var kqu =  doido*gt/doiVnd;
+       
+        if(doido== '1' ){
+            var ketqua= kqu +"USD"
+        }
+        if(doido == '23000' ){
+         var ketqua = kqu + "VNĐ"
+        }
+    var  keq = "Result: "+ ketqua;
+    document.getElementById('kq').innerHTML = keq;     
+        }          
+</script>
+</body>
+</html>

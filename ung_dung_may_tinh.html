@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th><th><input id="so1" type="number"></th></th>
+            <th><th><input id="so2" type="number"></th></th>
+            
+        </tr>
+        <tr>
+            <th scope="col"><button onclick="add()" >Addition(+)</button></th>
+            <th scope="col"><button onclick="sub()" >Subtruction(-)</button></th>
+            <th scope="col"><button onclick="mul()" >Multiplication(*)</button></th>
+            <th scope="col"><button onclick="div()" >Division(/)</button</th>
+        </tr>        
+    </table>
+    <p><div id= so0></div></p>
+    <script>
+        function add() {
+            var number1 = document.getElementById('so1').value;
+            var number2 = document.getElementById('so2').value;                     
+            var d1 = parseFloat(number1);
+            var d2 = parseFloat(number2);
+            var add1 = d1 + d2;  
+            var add2 = "Result Addition: " + add1;
+            document.getElementById('so0').innerHTML = add2 ;
+        }
+        function sub() {            
+            var number3 = document.getElementById('so1').value;
+            var number4 = document.getElementById('so2').value;                    
+            var d3 = parseFloat(number3);
+            var d4 = parseFloat(number4);
+            var sub1 = d3 - d4;
+            var sub2 = "Result Subtruction: " + sub1;
+            document.getElementById('so0').innerHTML = sub2;
+        }
+        function mul() {
+            var number5 = document.getElementById('so1').value;
+            var number6 = document.getElementById('so2').value;            
+            var d5 = parseFloat(number5);
+            var d6 = parseFloat(number6);
+            var mul1 = d5 * d6;
+            var mul2 = 'Result Multiplication: ' + mul1;
+            document.getElementById('so0').innerHTML = mul2 ;
+        }
+        function div() {
+            var number7 = document.getElementById('so1').value;
+            var number8 = document.getElementById('so2').value;  
+            var d7 = parseFloat(number7);
+            var d8 = parseFloat(number8);
+            var div1 = d7 / d8;
+            var div2 = "Result Division: " + div1;
+            document.getElementById('so0').innerHTML = div2;
+        }
+    </script>    
+</body>
+</html>
