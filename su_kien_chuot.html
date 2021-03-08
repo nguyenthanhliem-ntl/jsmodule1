@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="docReady()">
+    <form>
+        <img  id='cao1' src="cao.jpg" alt="cao" style="position:absolute;left:0; top:0;" width="300px" height="350px";/>
+    </form>
+    <script>
+        function up()   {       
+            cao = document.getElementById('cao1');
+        cao.style.top = parseInt(cao.style.top) - 30 +"px";
+    }
+        function down() {
+            let cao = document.getElementById('cao1');
+        cao.style.top = parseInt(cao.style.top) + 30 +"px";    
+    }
+        function left() {
+            let cao = document.getElementById("cao1");
+        cao.style.left = parseInt(cao.style.left) - 30 + "px";    
+    }
+        function right() {
+            let cao = document.getElementById('cao1');
+        cao.style.left = parseInt(cao.style.left) + 30 +"px";
+    }
+    function chuyenanh(evt) {
+        switch(evt.keyCode) {
+            case 37:
+                left(); 
+                break;
+            case 38:
+                up();
+                break;
+            case 39:
+                right();
+                break;    
+            case 40:
+                down();
+                break;
+        }
+    }
+    function docReady() {
+    window.addEventListener('keydown',chuyenanh);
+}
+
+
+    
+
+    </script>
+</body>
+</html>
