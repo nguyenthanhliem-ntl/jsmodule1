@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+</head>
+<body>
+    <!-- <div style="margin-left: 200px;">
+        <p id="thongbao" style="color: green;font-size: xx-large" ></p>
+        <img id="pic1" src="meo1.jpg" onclick="clickchuot(this)" >
+        <img id="pic2" src="gau2.jpg" onclick="clickchuot(this) " >
+        <img id="pic3" src="meo3.jpg" onclick="clickchuot(this)" >
+        <img id="pic4" src="khi4.jpg" onclick="clickchuot(this)" >
+        <img id="pic5" src="gau5.jpg" onclick="clickchuot(this)" >
+
+    </div>
+<script>
+    function clickchuot(img) {
+        let x = img.getAttribute('src')
+        switch (img.id) {
+            case "pic1":
+                if (x == "meo1.jpg") {
+                    img.src = "gau1.jpg"
+                } else if (x == "gau1.jpg") {
+                    img.src = "khi1.jpg"
+                } else {
+                    img.src = "meo1.jpg"
+                }
+                break;
+            case "pic2":
+                if (x == "meo2.jpg") {
+                    img.src = "gau2.jpg"
+                } else if (x == "gau2.jpg") {
+                    img.src = "khi2.jpg"
+                } else {
+                    img.src = "meo2.jpg"
+                }
+                break;
+            case "pic3":
+                if (x == "meo3.jpg") {
+                    img.src = "gau3.jpg"
+                } else if (x == "gau3.jpg") {
+                    img.src = "gau3.jpg"
+                } else {
+                    img.src = "meo3.jpg"
+                }
+                break;
+            case "pic4":
+                if (x == "meo4.jpg") {
+                    img.src = "gau4.jpg"
+                } else if (x == "gau4.jpg") {
+                    img.src = "khi4.jpg"
+                } else {
+                    img.src = "meo4.jpg"
+                }
+                break;
+            case "pic5":
+                if (x == "meo5.jpg") {
+                    img.src = "gau5.jpg"
+                } else if (x == "gau5.jpg") {
+                    img.src = "khi5.jpg"
+                } else {
+                    img.src = "meo5.jpg"
+                }
+                break;
+        }
+        if ( pic1.getAttribute('src') == "meo1.jpg" && pic2.getAttribute('src') == "meo2.jpg" && pic3.getAttribute('src') == "meo3.jpg" && pic4.getAttribute('src') == "meo4.jpg" && pic5.getAttribute('src') == "meo5.jpg") {
+            document.getElementById("thongbao").innerHTML = "Con mèo"
+        }else  if ( pic1.getAttribute('src') == "gau1.jpg" && pic2.getAttribute('src') == "gaua2.jpg" && pic3.getAttribute('src') == "gau3.jpg" && pic4.getAttribute('src') == "gau4.jpg" && pic5.getAttribute('src') == "gau5.jpg") {
+            document.getElementById("thongbao").innerHTML = "Con gấu trúc"
+        }else if ( pic1.getAttribute('src') == "khi1.jpg" && pic2.getAttribute('src') == "khi2.jpg" && pic3.getAttribute('src') == "khi3.jpg" && pic4.getAttribute('src') == "khi4.jpg" && pic5.getAttribute('src') == "khi5.jpg") {
+            document.getElementById("thongbao").innerHTML = "Con khỉ"
+        }else {
+            document.getElementById("thongbao").innerHTML = "Click thêm"
+        }
+    } -->
+</script>
+</body>
+</html>
