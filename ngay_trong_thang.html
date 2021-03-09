@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <input id="thang" style="width: 150px;"/>
+        <button type = "button" onclick="mouth()">Tính số ngày</button>
+    </form>
+    <p> <div id="result"></div></p>
+    
+    <script>
+        function mouth() {
+        let thang0 = parseInt( document.getElementById("thang").value);        
+            switch(thang0) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("result").innerHTML = "thang" +thang0 + "co 31 ngày"  ;                    
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("result").innerHTML = "thang"+ thang0 + "co 30 ngày"  ;
+                    break;
+                case 2:
+                    document.getElementById("result").innerHTML = "thang"+ thang0 +"co 28 hoac 29 ngay";
+                    break;
+                default:
+                    document.write('khong co thang');                   
+    
+            }
+        }    
+    </script>
+</body>
+
+</html>
