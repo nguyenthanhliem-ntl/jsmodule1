@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>     
+    <style>
+        img{
+            width: 750px;
+            height: 150px;
+        }
+        
+    </style>        
+</head>
+<body>
+    <p id="thongbao" style="color: rgb(228, 38, 38);font-size:30px" ></p> 
+    <div style="margin-left: 400px;">         
+          
+        <img id="meo1" src="meo1.jpg" onclick="chuyen(this)" alt="1"/>
+        <img id="meo2" src="khi2.jpg" onclick="chuyen(this)" alt="2"/>
+        <img id="meo3" src="gau3.jpg" onclick="chuyen(this)" alt="3"/>
+        <img id="meo4" src="khi4.jpg" onclick="chuyen(this)" alt="4"/>
+        <img id="meo5" src="meo5.jpg" onclick="chuyen(this)" alt="5"/>
+    </div>
+<script>
+    
+    function chuyen(img) {
+        let c = img.getAttribute("src");
+            switch(img.id) {
+                case 'meo1':arguments
+                    if(c =='meo1.jpg'){
+                        img.src ="gau1.jpg";
+                    }else if(c == 'gau1.jpg'){
+                        img.src ='khi1.jpg';
+                    }else{
+                        img.src = "meo1.jpg"
+                    }
+                break;
+                case 'meo2':arguments
+                    if(c=='khi2.jpg') {
+                        img.src = 'meo2.jpg';
+                    }else if(c=='meo2.jpg') {
+                        img.src = 'gau2.jpg';
+                    }else{
+                        img.src = 'khi2.jpg';
+                    }
+                    break;
+                case 'meo3':arguments
+                    if(c=='meo3.jpg') {
+                        img.src= 'gau3.jpg';
+                    }else if(c =='gau3.jpg') {
+                        img.src = 'khi3.jpg';
+                    }else {
+                        img.src = 'meo3.jpg'
+                    }
+                    break;
+                case 'meo4':arguments
+                    if(c =="khi4.jpg") {
+                        img.src = 'meo4.jpg';
+                    }else if (c=='meo4.jpg') {
+                        img.src = 'gau4.jpg';
+                    }else{
+                        img.src = 'khi4.jpg';
+                    }
+                    break;
+                case 'meo5':arguments
+                    if(c=='meo5.jpg') {
+                        img.src = 'gau5.jpg';
+                    }else if(c=='gau5.jpg') {
+                        img.src='khi5.jpg';
+                    }else{
+                        img.src='meo5.jpg';
+                    }
+                    break;
+            }
+        if(meo1.getAttribute('src') == 'meo1.jpg' && meo2.getAttribute('src') == 'meo2.jpg' && meo3.getAttribute('src')=='meo3.jpg' && meo4.getAttribute('src')=='meo4.jpg'&&meo5.getAttribute('src')=='meo5.jpg'){
+            document.getElementById('thongbao').innerText= 'Con mèo';
+        }else if(meo1.getAttribute('src')=='khi1.jpg' && meo2.getAttribute('src')=='khi2.jpg' && meo3.getAttribute('src')=='khi3.jpg' && meo4.getAttribute('src')=='khi4.jpg'&&meo5.getAttribute('src')=='khi5.jpg'){
+            document.getElementById('thongbao').innerHTML= 'Con khỉ';
+        }else if(meo1.getAttribute('src')=='gau1.jpg' && meo2.getAttribute('src')=='gau2.jpg' && meo3.getAttribute('src')=='gau3.jpg' && meo4.getAttribute('src')=='gau4.jpg'&&meo5.getAttribute('src')=='gau5.jpg'){
+            document.getElementById('thongbao').innerHTML= 'Con gấu';        
+        }else{
+            document.getElementById('thongbao').innerHTML= 'Click đi';
+        }
+    }
+</script>
+</body>
+</html>
